@@ -80,9 +80,7 @@ adicionar e remover elementos depois que a lista já foi criada.
 EXERCÍCIO 2 — STRINGS, LISTAS E ORDENAÇÃO
 ==================================================
 
-O exercício foi realizado por meio do script Python04_2.1.py.
-
-Código executado:
+Código:
 
 taxa = "sapiens, erectus, neanderthalensis"
 
@@ -98,6 +96,10 @@ print(type(species))
 
 print(sorted(species))
 print(sorted(species, key=len))
+
+Comando utilizado:
+
+python3 Python04_2.1.py
 
 
 RESULTADO:
@@ -132,4 +134,442 @@ Também foi observado que sorted() retorna uma lista ordenada
 sem modificar a lista original.
 
 
+================================================== 
+EXERCÍCIO 3 — Cópia de listas
+================================================== 
 
+Método 1:
+
+my_list = ['a', 'bb', 'ccc']
+list_copy = my_list
+print(my_list)
+list_copy.append('dddd')
+print(my_list)
+
+Resultado:
+
+['a', 'bb', 'ccc']
+['a', 'bb', 'ccc', 'dddd']
+
+Método 2:
+
+my_list2 = ['a', 'bb', 'ccc']
+list_copy2 = my_list2.copy()
+print(my_list2)
+list_copy2.append('dddd')
+print(my_list2)
+
+Resultado:
+
+['a', 'bb', 'ccc']
+['a', 'bb', 'ccc']
+
+Conclusão:
+A diferença é que, no primeiro caso, "list_copy" e "my_list" apontam para a mesma lista. Então, se eu mudar "list_copy", a mudança também aparece em "my_list".
+
+No segundo caso, ".copy()" cria uma nova lista, separada da original. Por isso, se eu alterar "list_copy2", "my_list2" continua igual.
+
+
+==================================================
+
+EXERCÍCIO 4 — Números de 1 a 100
+
+==================================================
+
+Código:
+
+n = 1
+
+while n <= 100:
+    print(n)
+    n += 1
+
+Comando utilizado:
+
+python3 Python04_4.1.py
+
+Resultado:
+
+1
+2
+3
+4
+5
+...
+96
+97
+98
+99
+100
+
+Conclusão:
+
+O comando "while" repete o código enquanto a condição for verdadeira. Nesse caso, o programa começa com "n = 1" e vai aumentando o valor de "n" em 1 a cada repetição usando "n += 1". Quando "n" passa de 100, a condição deixa de ser verdadeira e o programa para.
+
+
+
+
+==================================================
+
+EXERCÍCIO 5 — Fatorial de 1000
+
+==================================================
+
+Código:
+
+n = 1
+fatorial = 1
+
+while n <= 1000:
+    fatorial *= n
+    n += 1
+
+print("fatorial de 1000 =", fatorial)
+
+Comando utilizado:
+
+python3 Python04_5.1.py
+
+Resultado:
+
+fatorial de 1000 = 402387260077093773543702433923003985719374864210714632543799910429938512398629020592044208486969404800479988610841294080000000000000000000000000
+
+Conclusão:
+
+O programa calcula o fatorial de 1000 usando o comando "while". A variável "fatorial" começa com o valor 1 e vai sendo multiplicada pelos números de 1 até 1000. O comando "*=" é uma forma abreviada de multiplicar o valor atual da variável pelo próximo número.
+
+
+
+
+==================================================
+
+EXERCÍCIO 6 — Números pares
+
+==================================================
+
+Código:
+
+numbers = [101, 2, 15, 22, 95, 33, 2, 27, 72, 15, 52]
+
+for n in numbers:
+    if n % 2 == 0:
+        print(n)
+
+
+Comando utilizado:
+
+python3 Python04_6.1.py
+
+
+Resultado:
+
+2
+22
+2
+72
+52
+
+Conclusão:
+
+O comando "for" percorre todos os números da lista. Para verificar quais são pares, foi utilizado "n % 2 == 0". O operador "%" mostra o resto da divisão. Quando o resto da divisão por 2 é igual a zero, o número é par.
+
+
+
+
+==================================================
+
+EXERCÍCIO 7 — Soma dos números pares e ímpares
+
+==================================================
+
+Código:
+
+numbers = [101, 2, 15, 22, 95, 33, 2, 27, 72, 15, 52]
+
+numbers = sorted(numbers)
+
+soma_pares = 0
+soma_impares = 0
+
+for n in numbers:
+    print(n)
+
+    if n % 2 == 0:
+        soma_pares += n
+    else:
+        soma_impares += n
+
+print("Soma dos números pares:", soma_pares)
+print("Soma dos números ímpares:", soma_impares)
+
+
+Comando utilizado:
+
+python3 Python04_7.1.py
+
+Resultado:
+
+2
+2
+15
+15
+22
+27
+33
+52
+72
+95
+101
+Soma dos números pares: 150
+Soma dos números ímpares: 286
+
+Conclusão:
+
+A função "sorted()" organiza os números da lista em ordem crescente. Depois, o comando "for" percorre cada número e verifica se ele é par ou ímpar. Os valores pares são adicionados em "soma_pares" e os ímpares em "soma_impares".
+
+
+
+
+==================================================
+
+EXERCÍCIO 8 — Função range()
+
+==================================================
+
+Parte 1:
+
+Código:
+
+for n in range(100):
+print(n)
+
+Resultado:
+
+0
+1
+2
+3
+4
+...
+97
+98
+99
+
+Parte 2:
+
+Código:
+
+for n in range(1, 101):
+print(n)
+
+Resultado:
+
+1
+2
+3
+4
+5
+...
+98
+99
+100
+
+Conclusão:
+
+A função "range()" cria uma sequência de números. No primeiro caso, "range(100)" gera números de 0 até 99. No segundo caso, "range(1, 101)" gera números de 1 até 100. O último número indicado no "range()" não é incluído.
+
+
+
+
+==================================================
+
+EXERCÍCIO 9 — Compreensão de listas
+
+==================================================
+
+Código:
+
+numbers = [n for n in range(1, 101)]
+
+print(numbers)
+
+Resultado:
+
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, ..., 98, 99, 100]
+
+Conclusão:
+
+Foi utilizada uma compreensão de lista para criar uma lista com os números de 1 a 100. A estrutura "[n for n in range(1, 101)]" percorre os números gerados por "range()" e coloca cada um deles dentro de uma nova lista.
+
+
+
+
+==================================================
+
+EXERCÍCIO 10 — Argumentos pela linha de comando
+
+==================================================
+
+Parte 1:
+
+Código:
+
+import sys
+
+inicio = int(sys.argv[1])
+fim = int(sys.argv[2])
+
+for n in range(inicio, fim + 1):
+    print(n)
+
+Comando utilizado:
+
+python3 Python04_10.1.py 3 10
+
+Resultado:
+
+3
+4
+5
+6
+7
+8
+9
+10
+
+Conclusão:
+
+O módulo "sys" permite acessar informações fornecidas pela linha de comando. Os valores "sys.argv[1]" e "sys.argv[2]" recebem os números informados ao executar o programa. A função "int()" transforma esses valores em números inteiros.
+
+
+
+
+Parte 2 — Somente números ímpares
+
+Código:
+
+import sys
+
+inicio = int(sys.argv[1])
+fim = int(sys.argv[2])
+
+for n in range(inicio, fim + 1):
+    if n % 2 != 0:
+        print(n)
+
+Comando utilizado:
+
+python3 Python04_10.2.py 3 10
+
+Resultado:
+
+3
+5
+7
+9
+
+Conclusão:
+
+O segundo programa foi modificado para mostrar somente os números ímpares. Para isso, foi utilizada a condição "n % 2 != 0". Quando o resto da divisão por 2 é diferente de zero, o número é ímpar.
+
+
+
+
+==================================================
+
+EXERCÍCIO 11 — Sequências de DNA
+
+==================================================
+
+Código:
+
+sequences = ['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG','ATATATATCGAT','ATGGGCCC']
+
+for sequence in sequences:
+    print(len(sequence), "\t", sequence)
+
+
+Comando utilizado:
+
+python3 Python04_11.1.py
+
+
+
+Resultado:
+
+14 ATGCCCGGCCCGGC
+25 GCGTGCTAGCAATACGATAAACCGG
+12 ATATATATCGAT
+8 ATGGGCCC
+
+Conclusão:
+
+O programa percorre cada sequência de DNA utilizando o comando "for". A função "len()" calcula o número de caracteres de cada sequência. O "\t" foi utilizado para criar uma tabulação entre o tamanho da sequência e a própria sequência.
+
+
+
+
+==================================================
+
+EXERCÍCIO 12 — Comprimento e sequência
+
+==================================================
+
+Código:
+
+sequences = ['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG','ATATATATCGAT','ATGGGCCC']
+
+result = [(len(sequence), sequence) for sequence in sequences]
+
+print(result)
+
+
+Comando utilizado:
+
+python3 Python04_12.1.py
+
+
+Resultado:
+
+[(14, 'ATGCCCGGCCCGGC'),
+(25, 'GCGTGCTAGCAATACGATAAACCGG'),
+(12, 'ATATATATCGAT'),
+(8, 'ATGGGCCC')]
+
+Conclusão:
+
+Foi utilizada uma compreensão de lista para criar uma nova lista contendo o tamanho e a sequência de cada sequência de DNA. As duas informações foram agrupadas em uma tupla utilizando parênteses.
+
+
+
+
+==================================================
+
+EXERCÍCIO 13 — Posição das sequências
+
+==================================================
+
+Código:
+
+sequences = ['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG','ATATATATCGAT','ATGGGCCC']
+
+
+for i in range(len(sequences)):
+    print(i + 1, "\t", len(sequences[i]), "\t", sequences[i])
+
+
+Comando utilizado:
+
+python3 Python04_13.1.py
+
+
+Resultado:
+
+1 14 ATGCCCGGCCCGGC
+2 25 GCGTGCTAGCAATACGATAAACCGG
+3 12 ATATATATCGAT
+4 8 ATGGGCCC
+
+Conclusão:
+
+O programa utiliza "range(len(sequences))" para percorrer os índices da lista. Como os índices em Python começam em zero, foi utilizado "i + 1" para mostrar a posição das sequências começando em 1.
