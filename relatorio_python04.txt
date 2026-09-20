@@ -1,0 +1,135 @@
+RELATÓRIO PYTHON 04
+
+Nome: Luana Carletti
+Número USP: 13863178
+Repositório: CEN0336_2026_13863178_Python04
+
+
+==================================================
+EXERCÍCIO 1 — LISTAS
+==================================================
+
+>>> things = ['chocolate', 'viagem', 'música', 'praia', 'filmes']
+
+>>> print(things)
+['chocolate', 'viagem', 'música', 'praia', 'filmes']
+
+>>> print(things[2])
+música
+
+>>> things[2] = 'livros'
+
+>>> print(things)
+['chocolate', 'viagem', 'livros', 'praia', 'filmes']
+
+>>> things.append('sorvete')
+
+>>> print(things)
+['chocolate', 'viagem', 'livros', 'praia', 'filmes', 'sorvete']
+
+>>> things.insert(0, 'café')
+
+>>> print(things)
+['café', 'chocolate', 'viagem', 'livros', 'praia', 'filmes', 'sorvete']
+
+>>> things.insert(3, 'gatos')
+
+>>> print(things)
+['café', 'chocolate', 'viagem', 'gatos', 'livros', 'praia', 'filmes', 'sorvete']
+
+>>> things.pop()
+'sorvete'
+
+>>> print(things)
+['café', 'chocolate', 'viagem', 'gatos', 'livros', 'praia', 'filmes']
+
+>>> things.pop(0)
+'café'
+
+>>> print(things)
+['chocolate', 'viagem', 'gatos', 'livros', 'praia', 'filmes']
+
+>>> things.pop(2)
+'gatos'
+
+>>> print(things)
+['chocolate', 'viagem', 'livros', 'praia', 'filmes']
+
+>>> print(', '.join(things))
+chocolate, viagem, livros, praia, filmes
+
+
+OBSERVAÇÕES:
+
+Em Python, os índices das listas começam pelo zero. Então, quando usamos things[2], 
+estamos pegando o terceiro elemento da lista.
+
+O append() serve para adicionar um elemento no final da lista, enquanto o insert() 
+permite colocar um elemento em uma posição específica.
+
+Já o pop() remove um elemento da lista e mostra qual foi removido. Se não colocarmos uma posição, 
+ele remove o último elemento.
+
+O join() é usado para juntar os elementos de uma lista de textos em uma única frase, usando um separador.
+
+Com esse exercício, deu para entender que as listas são mutáveis, ou seja, podemos alterar, 
+adicionar e remover elementos depois que a lista já foi criada.
+
+
+==================================================
+EXERCÍCIO 2 — STRINGS, LISTAS E ORDENAÇÃO
+==================================================
+
+O exercício foi realizado por meio do script Python04_2.1.py.
+
+Código executado:
+
+taxa = "sapiens, erectus, neanderthalensis"
+
+print(taxa)
+print(taxa[1])
+print(type(taxa))
+
+species = taxa.split(", ")
+
+print(species)
+print(species[1])
+print(type(species))
+
+print(sorted(species))
+print(sorted(species, key=len))
+
+
+RESULTADO:
+
+sapiens, erectus, neanderthalensis
+a
+<class 'str'>
+['sapiens', 'erectus', 'neanderthalensis']
+erectus
+<class 'list'>
+['erectus', 'neanderthalensis', 'sapiens']
+['sapiens', 'erectus', 'neanderthalensis']
+
+
+OBSERVAÇÕES:
+
+A variável taxa é uma string, como demonstrado pelo resultado
+<class 'str'>. A indexação começa em zero, portanto taxa[1]
+retorna o segundo caractere da string.
+
+O método split(", ") divide a string usando vírgula e espaço
+como separador, criando uma lista chamada species.
+
+A variável species é uma lista, como demonstrado pelo resultado
+<class 'list'>.
+
+A função sorted() retorna os elementos em ordem alfabética.
+Quando usamos key=len, a ordenação passa a considerar o tamanho
+de cada elemento como critério.
+
+Também foi observado que sorted() retorna uma lista ordenada
+sem modificar a lista original.
+
+
+
