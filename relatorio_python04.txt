@@ -61,19 +61,15 @@ chocolate, viagem, livros, praia, filmes
 
 OBSERVAÇÕES:
 
-Em Python, os índices das listas começam pelo zero. Então, quando usamos things[2], 
-estamos pegando o terceiro elemento da lista.
+Em Python, os índices das listas começam pelo zero. Então, quando usamos "things[2]", estamos pegando o terceiro elemento da lista.
 
-O append() serve para adicionar um elemento no final da lista, enquanto o insert() 
-permite colocar um elemento em uma posição específica.
+O "append()" serve para adicionar um elemento no final da lista, enquanto o "insert()" permite colocar um elemento em uma posição específica.
 
-Já o pop() remove um elemento da lista e mostra qual foi removido. Se não colocarmos uma posição, 
-ele remove o último elemento.
+Já o "pop()" remove um elemento da lista e mostra qual foi removido. Se não colocarmos uma posição, ele remove o último elemento.
 
-O join() é usado para juntar os elementos de uma lista de textos em uma única frase, usando um separador.
+O "join()" é usado para juntar os elementos de uma lista de textos em uma única frase, usando um separador.
 
-Com esse exercício, deu para entender que as listas são mutáveis, ou seja, podemos alterar, 
-adicionar e remover elementos depois que a lista já foi criada.
+Com esse exercício, deu para entender que as listas são mutáveis, ou seja, podemos alterar, adicionar e remover elementos depois que a lista já foi criada.
 
 
 ==================================================
@@ -116,22 +112,15 @@ erectus
 
 OBSERVAÇÕES:
 
-A variável taxa é uma string, como demonstrado pelo resultado
-<class 'str'>. A indexação começa em zero, portanto taxa[1]
-retorna o segundo caractere da string.
+A variável "taxa" é uma string, como mostra o resultado "<class 'str'>". Como a indexação começa em zero, "taxa[1]" retorna o segundo caractere da string.
 
-O método split(", ") divide a string usando vírgula e espaço
-como separador, criando uma lista chamada species.
+O "split(', ')" divide a string usando vírgula e espaço como separador, criando uma lista chamada "species".
 
-A variável species é uma lista, como demonstrado pelo resultado
-<class 'list'>.
+A variável "species" é uma lista, como mostra o resultado "<class 'list'>".
 
-A função sorted() retorna os elementos em ordem alfabética.
-Quando usamos key=len, a ordenação passa a considerar o tamanho
-de cada elemento como critério.
+A função "sorted()" organiza os elementos em ordem alfabética. Quando usamos "key=len", ela passa a organizar os elementos de acordo com o tamanho de cada um.
 
-Também foi observado que sorted() retorna uma lista ordenada
-sem modificar a lista original.
+Também foi possível perceber que "sorted()" cria uma nova lista ordenada, sem modificar a lista original.
 
 
 ================================================== 
@@ -236,7 +225,9 @@ fatorial de 1000 = 4023872600770937735437024339230039857193748642107146325437999
 
 Conclusão:
 
-O programa calcula o fatorial de 1000 usando o comando "while". A variável "fatorial" começa com o valor 1 e vai sendo multiplicada pelos números de 1 até 1000. O comando "*=" é uma forma abreviada de multiplicar o valor atual da variável pelo próximo número.
+O programa calcula o fatorial de 1000 usando o comando "while". A variável "fatorial" começa com o valor 1 e vai sendo multiplicada pelos números de 1 até 1000.
+
+O comando "*=" é uma forma mais curta de multiplicar o valor que a variável já possui pelo próximo número. Assim, o valor de "fatorial" vai aumentando até chegar ao resultado do fatorial de 1000.
 
 
 
@@ -271,9 +262,11 @@ Resultado:
 
 Conclusão:
 
-O comando "for" percorre todos os números da lista. Para verificar quais são pares, foi utilizado "n % 2 == 0". O operador "%" mostra o resto da divisão. Quando o resto da divisão por 2 é igual a zero, o número é par.
+O comando "for" percorre todos os números da lista. Para verificar quais são pares, usamos "n % 2 == 0".
 
+O operador "%" mostra o resto da divisão. Então, quando o resto da divisão por 2 é igual a zero, significa que o número é par.
 
+Por exemplo, se "n = 6", temos "6 % 2 = 0", então o número 6 é par. Já se "n = 5", temos "5 % 2 = 1", então o número 5 não é par.
 
 
 ==================================================
@@ -325,8 +318,9 @@ Soma dos números ímpares: 286
 
 Conclusão:
 
-A função "sorted()" organiza os números da lista em ordem crescente. Depois, o comando "for" percorre cada número e verifica se ele é par ou ímpar. Os valores pares são adicionados em "soma_pares" e os ímpares em "soma_impares".
+A função "sorted()" organiza os números da lista em ordem crescente. Depois, o comando "for" passa por cada número e verifica se ele é par ou ímpar.
 
+Os números pares são adicionados em "soma_pares", enquanto os números ímpares são adicionados em "soma_impares".
 
 
 
@@ -376,15 +370,13 @@ Resultado:
 
 Conclusão:
 
-A função "range()" cria uma sequência de números. No primeiro caso, "range(100)" gera números de 0 até 99. No segundo caso, "range(1, 101)" gera números de 1 até 100. O último número indicado no "range()" não é incluído.
+A função "range()" cria uma sequência de números. No primeiro caso, "range(100)" gera números de 0 até 99. Já no segundo, "range(1, 101)" gera números de 1 até 100.
 
-
+Isso acontece porque o último número colocado no "range()" não é incluído.
 
 
 ==================================================
-
 EXERCÍCIO 9 — Compreensão de listas
-
 ==================================================
 
 Código:
@@ -399,15 +391,11 @@ Resultado:
 
 Conclusão:
 
-Foi utilizada uma compreensão de lista para criar uma lista com os números de 1 a 100. A estrutura "[n for n in range(1, 101)]" percorre os números gerados por "range()" e coloca cada um deles dentro de uma nova lista.
-
-
+Foi utilizada uma compreensão de lista para criar uma lista com os números de 1 a 100. A estrutura "[n for n in range(1, 101)]" percorre os números gerados por "range()" e coloca cada um deles em uma nova lista.
 
 
 ==================================================
-
 EXERCÍCIO 10 — Argumentos pela linha de comando
-
 ==================================================
 
 Parte 1:
@@ -439,9 +427,7 @@ Resultado:
 
 Conclusão:
 
-O módulo "sys" permite acessar informações fornecidas pela linha de comando. Os valores "sys.argv[1]" e "sys.argv[2]" recebem os números informados ao executar o programa. A função "int()" transforma esses valores em números inteiros.
-
-
+O módulo "sys" foi usado para que o programa recebesse informações digitadas na linha de comando. O "sys.argv[1]" pegou o primeiro valor informado e o "sys.argv[2]" pegou o segundo. Como esses valores foram recebidos como texto, usamos "int()" para transformá-los em números inteiros e poder fazer cálculos com eles.
 
 
 Parte 2 — Somente números ímpares
@@ -470,7 +456,9 @@ Resultado:
 
 Conclusão:
 
-O segundo programa foi modificado para mostrar somente os números ímpares. Para isso, foi utilizada a condição "n % 2 != 0". Quando o resto da divisão por 2 é diferente de zero, o número é ímpar.
+O segundo programa foi modificado para mostrar apenas os números ímpares. Para isso, foi usada a condição "n % 2 != 0". Quando o resto da divisão por 2 é diferente de zero, o número é ímpar.
+
+Por exemplo, "5 % 2 = 1", então 5 foi identificado como ímpar.
 
 
 
@@ -504,9 +492,7 @@ Resultado:
 
 Conclusão:
 
-O programa percorre cada sequência de DNA utilizando o comando "for". A função "len()" calcula o número de caracteres de cada sequência. O "\t" foi utilizado para criar uma tabulação entre o tamanho da sequência e a própria sequência.
-
-
+O programa percorreu cada sequência de DNA usando o "for", analisando uma sequência por vez. A função "len()" contou quantos caracteres havia em cada sequência, mostrando o seu tamanho. Já o "\t" foi usado para criar uma tabulação, deixando o tamanho e a sequência mais organizados na hora de mostrar o resultado.
 
 
 ==================================================
@@ -538,7 +524,7 @@ Resultado:
 
 Conclusão:
 
-Foi utilizada uma compreensão de lista para criar uma nova lista contendo o tamanho e a sequência de cada sequência de DNA. As duas informações foram agrupadas em uma tupla utilizando parênteses.
+Foi usada uma compreensão de lista para criar uma nova lista com o tamanho e a sequência de cada DNA. As duas informações foram colocadas juntas em uma tupla, usando "()".
 
 
 
@@ -572,4 +558,4 @@ Resultado:
 
 Conclusão:
 
-O programa utiliza "range(len(sequences))" para percorrer os índices da lista. Como os índices em Python começam em zero, foi utilizado "i + 1" para mostrar a posição das sequências começando em 1.
+O programa usou "range(len(sequences))" para percorrer todas as posições da lista de sequências. O "len()" contou quantas sequências existiam e o "range()" gerou os índices para acessá-las. Como o Python começa a contar pelo índice 0, foi usado "i + 1" para mostrar a posição começando em 1. Dessa forma, o resultado ficou mais fácil de entender e identificar a sequência pela sua posição.
